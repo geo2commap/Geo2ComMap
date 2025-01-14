@@ -17,7 +17,7 @@ Geo2ComMap leverages geographic data and a U-Net-based model to predict MIMO thr
 
 1. **Ray Tracing-Based Dataset Generation**: A simulation pipeline to compute MIMO throughput, generating high-quality datasets for training.
 2. **U-Net Model Training**: A deep learning model trained using the generated dataset to predict full throughput maps for target areas.
-3. **Special Sampling Strategy**: A novel approach to handle high-error outliers, significantly improving prediction accuracy by reducing extreme errors and RMSE compared to traditional random sampling.
+3. **Special Sampling Strategy**: A novel approach to handle high-error regions, significantly improving prediction accuracy by reducing extreme errors and RMSE compared to traditional random sampling.
 
 Through experiments, Geo2ComMap evaluates the necessary input data for the U-Net model and explores performance across varying sparse point sampling strategies.
 
