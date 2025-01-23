@@ -38,13 +38,13 @@ class AttentionUNet(nn.Module):
     def __init__(self, in_channels, out_channels):
         super(AttentionUNet, self).__init__()
         self.enc1 = self.conv_block(in_channels, 64)
-        self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.pool1 = nn.MaxPool2d(2)
         self.enc2 = self.conv_block(64, 128)
-        self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.pool2 = nn.MaxPool2d(2)
         self.enc3 = self.conv_block(128, 256)
-        self.pool3 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.pool3 = nn.MaxPool2d(2)
         self.enc4 = self.conv_block(256, 512)
-        self.pool4 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.pool4 = nn.MaxPool2d(2)
         self.enc5 = self.conv_block(512, 1024)
 
         self.up4 = self.upconv(1024, 512)
