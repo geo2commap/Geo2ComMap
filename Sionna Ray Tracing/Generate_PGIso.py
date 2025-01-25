@@ -47,11 +47,11 @@ def generate_IsoMap(index, antenna_positions):
                                               vertical_spacing=0.5,
                                               horizontal_spacing=0.5,
                                               pattern="iso",
-                                              polarization="V")
+                                              polarization="VH")
 
         # set the transmitter
         tx_b = Transmitter(name=f"tx_b_{i}",
-                           position=[x, y, z],  # 使用天線的 x, y 座標
+                           position=[x, y, z],  
                            orientation=[0,0,0],
                            # color=(1, 0, 0)
                            )
