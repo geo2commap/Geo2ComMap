@@ -27,6 +27,7 @@ Through experiments, Geo2ComMap evaluates the necessary input data for the U-Net
 - opencv-python==4.10.0.84
 - sionna==0.18.0
 - torch==2.4.1
+- numpy==1.24.3
 
 ---
 ## Ray Tracing-Based MIMO Throughput Simulation
