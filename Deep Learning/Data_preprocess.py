@@ -18,7 +18,7 @@ def merge_npy_files(folder1, folder2, folder3, folder4, folder5, output_folder):
     print(len(files1))
     
     for file1, file2, file3, file4, file5 in zip(files1, files2, files3, files4, files5):
-        # 构建文件路径
+        # Set file path
         file_path1 = os.path.join(folder1, file1)
         file_path2 = os.path.join(folder2, file2)
         file_path3 = os.path.join(folder3, file3)
@@ -26,6 +26,7 @@ def merge_npy_files(folder1, folder2, folder3, folder4, folder5, output_folder):
         file_path5 = os.path.join(folder5, file5)
         
         try:
+            # Load data and preprocess data
             data1 = np.load(file_path1)  # P_iso
             data2 = np.load(file_path2)  # Building
             data3 = np.load(file_path3)  # Sparse Tput
