@@ -5,27 +5,23 @@ import torch.nn.functional as F
 class AttentionBlock(nn.Module):
     def __init__(self, F_g, F_l, F_int):
         super(AttentionBlock, self).__init__()
-        self.W_g = nn.Conv2d(F_g, F_int, kernel_size=1, stride=1, padding=0, bias=True)
-        self.W_x = nn.Conv2d(F_l, F_int, kernel_size=1, stride=1, padding=0, bias=True)
+        self.W_g = nn.Sequential(
+            nn.Conv2d(F_g, F_int, kernel_size=1, stride=1, padding=0, bias=True),
+            nn.BatchNorm2d(F_int)
+        )
+
+        self.W_x = nn.Sequential(
+            nn.Conv2d(F_l, F_int, kernel_size=1, stride=1, padding=0, bias=True),
+            nn.BatchNorm2d(F_int)
+        )
+
         self.psi = nn.Sequential(
             nn.Conv2d(F_int, 1, kernel_size=1, stride=1, padding=0, bias=True),
+            nn.BatchNorm2d(1),
             nn.Sigmoid()
         )
-        self.relu = nn.ReLU(inplace=True)
 
-    def forward(self, g, x):
-        # Process the gating signal g and the input signal x
-        g1 = self.W_g(g)  # Transform g
-        x1 = self.W_x(x)  # Transform x^l
-        
-        # Add the two signals and apply ReLU activation
-        psi = self.relu(g1 + x1)
-        
-        # Generate the attention coefficients
-        alpha = self.psi(psi)
-        
-        # Apply the attention coefficients to x^l
-        return x * alpha
+        self.relu = nn.ReLU(inplace=True)
 
     def forward(self, g, x):
         g1 = self.W_g(g)
@@ -35,16 +31,16 @@ class AttentionBlock(nn.Module):
         return x * psi
 
 class AttentionUNet(nn.Module):
-    def __init__(self, in_channels, out_channels):
+    def __init__(self, in_channels = 5, out_channels = 3):
         super(AttentionUNet, self).__init__()
         self.enc1 = self.conv_block(in_channels, 64)
-        self.pool1 = nn.MaxPool2d(2)
+        self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.enc2 = self.conv_block(64, 128)
-        self.pool2 = nn.MaxPool2d(2)
+        self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.enc3 = self.conv_block(128, 256)
-        self.pool3 = nn.MaxPool2d(2)
+        self.pool3 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.enc4 = self.conv_block(256, 512)
-        self.pool4 = nn.MaxPool2d(2)
+        self.pool4 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.enc5 = self.conv_block(512, 1024)
 
         self.up4 = self.upconv(1024, 512)
@@ -75,7 +71,7 @@ class AttentionUNet(nn.Module):
             nn.ReLU(inplace=True)
         )
 
-    def upconv(self, in_channels = 5, out_channels = 2):
+    def upconv(self, in_channels, out_channels):
         return nn.ConvTranspose2d(in_channels, out_channels, kernel_size=2, stride=2)
 
     def forward(self, x):
