@@ -4,11 +4,12 @@ Geo2ComMap is a comprehensive framework designed for MIMO throughput prediction 
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Ray Tracing-Based MIMO Throughput Simulation](#ray-tracing-based-mimo-throughput-simulation)
+2. [Requirements](#Requirements)
+3. [Ray Tracing-Based MIMO Throughput Simulation](#ray-tracing-based-mimo-throughput-simulation)
     - [Building Map Preparation](#building-map-preparation)
     - [Propagation Path Simulation](#propagation-path-simulation)
     - [MIMO Throughput Simulation](#mimo-throughput-simulation)
-3. [Geo2ComMap Dataset](#geo2commap-dataset)
+4. [Geo2ComMap Dataset](#geo2commap-dataset)
 
 ---
 
@@ -22,7 +23,12 @@ Geo2ComMap leverages geographic data and a U-Net-based model to predict MIMO thr
 Through experiments, Geo2ComMap evaluates the necessary input data for the U-Net model and explores performance across varying sparse point sampling strategies.
 
 ---
+## Requirements
+- opencv-python==4.10.0.84
+- sionna==0.18.0
+- torch==2.4.1
 
+---
 ## Ray Tracing-Based MIMO Throughput Simulation
 
 ### Building Map Preparation
