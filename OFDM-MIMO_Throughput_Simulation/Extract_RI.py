@@ -7,7 +7,7 @@ import cv2
 building = 'Building21'
 
 # Load the .mat file
-for index in range(2, 101):
+for index in range(1, 101):
     print(f"index = {index}")
     data = sio.loadmat(f'C:\\Users\\CTLAB\\Desktop\\Random 4\\{building}_{index}')
 
