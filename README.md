@@ -48,7 +48,7 @@ Through experiments, Geo2ComMap evaluates the necessary input data for the U-Net
 
 ## Geo2ComMap Dataset
 The dataset generated through the ray tracing-based MIMO throughput simulation is openly available for use and research:
-- **Dataset Access**: [Download from Google Drive](https://drive.google.com/file/d/1Atfnq0iCt7LdDpGswa6yC3ecJqt7wbsr/view?usp=sharing).
+- **Dataset Access**: [Download from Google Drive](https://drive.google.com/file/d/1Gtl7veFPqBz51F_9lkPLflj02sw-SpG4/view?usp=sharing).
 
 This dataset is tailored for U-Net training and forms the foundation for the predictive capabilities of Geo2ComMap.
 We will continue working on generating more data and update it as soon as possible.
