@@ -51,5 +51,5 @@ The dataset generated through the ray tracing-based MIMO throughput simulation i
 - **Dataset Access**: [Download from Dropbox](https://www.dropbox.com/scl/fo/puy6ggsto5kp7nwdcxndd/AA8EkX4v2Nf449AUBvFts4I?rlkey=y4h5cdox21m25duqlgeknu1qe&st=t1dsqecn&dl=0).
 
 This dataset is tailored for U-Net training and forms the foundation for the predictive capabilities of Geo2ComMap.
-We will continue working on generating more data and update it as soon as possible.
+
 
