@@ -109,7 +109,7 @@ def Ray_Tracing(building, tx_pos = [0, 0, 25], batch_size = 10000, index = 1):
         paths = scene.compute_paths(max_depth=3,
                             method='fibonacci',
                             num_samples=1e5,
-                            los = True,
+                            # los = True,
                             reflection=True,
                             diffraction=True,
                             check_scene=True,
