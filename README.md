@@ -1,7 +1,7 @@
 # Geo2ComMap: Deep Learning-Based MIMO Throughput Prediction Using Geographic Data
 
 ## Introduction
-This repository contains the official implementation of the paper: Fan-Hao Lin, Tzu-Hao Huang, Chao-Kai Wen, Trung Q. Duong, "Geo2ComMap: Deep Learning-Based MIMO Throughput Prediction Using Geographic Data," arXiv preprint arXiv:2504.00351, April 2025. [https://arxiv.org/abs/2504.00351](https://arxiv.org/abs/2504.00351) 
+This repository contains the original implementation of Fan-Hao Lin, Tzu-Hao Huang, Chao-Kai Wen, Trung Q. Duong, "Geo2ComMap: Deep Learning-Based MIMO Throughput Prediction Using Geographic Data," arXiv preprint arXiv:2504.00351, April 2025. [https://arxiv.org/abs/2504.00351](https://arxiv.org/abs/2504.00351) 
 
 ---
 
