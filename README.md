@@ -1,6 +1,13 @@
 # Geo2ComMap: Deep Learning-Based MIMO Throughput Prediction Using Geographic Data
 
-Geo2ComMap is a comprehensive framework designed for MIMO throughput prediction using deep learning and geographic databases.
+## Introduction
+This repository contains the official implementation of the paper:  
+**Fan-Hao Lin, Tzu-Hao Huang, Chao-Kai Wen, Trung Q. Duong**,  
+*"Geo2ComMap: Deep Learning-Based MIMO Throughput Prediction Using Geographic Data,"*  
+**arXiv preprint arXiv:2504.00351**, April 2025.  
+[View on arXiv](https://arxiv.org/abs/2504.00351) 
+
+---
 
 ## Table of Contents
 1. [Overview](#overview)
